@@ -2,9 +2,8 @@
 used to learn react
 # run in you local
 ```
-git clone https://github.com/wewin11235/react-demo.git
-cd react-demo
+git clone https://github.com/wewin11235/relearn-redux-async-demo.git
+cd relearn-redux-async-demo
 npm install
-./node_modules/.bin/webpack-dev-server --mode=development  
+npm run start
 ```
-# open 'the build/index.html' file in your browser
