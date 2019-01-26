@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
-import increment from '../actions/index'
+import { fetchPosts } from '../actions/index'
 import Counter from '../components/index'
 
 const mapStateToProps = (state, ownProps) => ({
-  sum: state
+  state: state
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  add: () => dispatch(increment)
+  request: () => dispatch(fetchPosts())
 })
 
 export default connect(

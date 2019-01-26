@@ -1,11 +1,22 @@
 import React from 'react';
 
-const reducer = (state = 0, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
+    case 'START_REQUEST':
+      return Object.assign({}, state, {
+        isFetching: true
+      })
+    case 'FETCH_ERROR':
+      return Object.assign({}, state, {
+        fetchError: true
+      })
+    case 'RECEIVE_POSTS':
+      return Object.assign({}, state, {
+        isFetching: false,
+        posts: action.posts
+      })
     default:
-      return state
+      state
   }
 }
 
