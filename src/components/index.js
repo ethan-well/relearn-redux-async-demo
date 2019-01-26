@@ -7,10 +7,10 @@ const Counter = ({ state, request }) => (
       <p>
         { state && state.isFetching ? '加载中....' : '加载完成' }
       </p>
-      <ul>
+      <ul className="list-style-custom">
         { state && state.posts
           ? state.posts.map((post, index) => (
-            <li key={index}>{post}</li>
+            <li key={index + 1}>{index + 1}：{post}</li>
           ))
           : '尚无数据' }
       </ul>
